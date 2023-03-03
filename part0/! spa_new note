@@ -1,0 +1,11 @@
+broswer->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->>browser: HTML document
+
+broswer-->>:  GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->>:broswer the css file
+
+broswer->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->>broswer: the JavaScript file
+Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+broswer->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->>brower: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
